@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <link href="calculator.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
+  <script src="calculator.js" defer></script>
+  <script> window.addEventListener('load', function() { resetCalculator() });</script>
+</head>
+
+<body>
+  <div class="logo-container">
+    <img src="../images/logo.svg" alt="Logo">
+  </div>
+  <div class="container">
+        <div class="panel">
+            <section class="section left-section">
+                <section class="section">
+                    <div><label for="billAmount">Bill</label></div>
+                    <input type="text" id="billAmount" class="bill-input" placeholder="0"/>
+                </section>
+        
+                <section class="select tip section">
+                    <label >Select Tip %</label>
+                    <div class="tip-buttons">
+                      <button class="tip-button">5%</button>
+                      <button class="tip-button">10%</button>
+                      <button class="tip-button">15%</button>
+                      <button class="tip-button">25%</button>
+                      <button class="tip-button">50%</button>
+                      <input type="text" id="customTipInput" placeholder="Custom" />
+                    </div>
+                  </section>
+                  
+        
+                  <section class="number of people section">
+                    <div><label for="numberOfPeople">Number of people</label></div>
+                    <input type="text" id="numberOfPeople" class="people-input" placeholder="0" />
+                  </section>
+            </section>
+              
+            <section class="section right-section">
+
+                
+              <div class="result">
+                <div class="result-item">
+                  <label>Tip Amount</label>
+                  <span class="result-value" id="tipPerPerson">$0.00</span>
+                  <span class="per-person-text" id="perPersonTip">/ person</span>
+                </div>
+                <div class="result-item">
+                  <label>Total</label>
+                  <span class="result-value" id="billPerPerson">$0.00</span>
+                  <span class="per-person-text" id="perPersonTotal">/ person</span>
+                </div>
+                
+                
+              </div>
+              <button id="resetButton">RESET</button>
+                    
+                  
+            </section>
+       </div>
+    </div>   
+</body>
+</html>
